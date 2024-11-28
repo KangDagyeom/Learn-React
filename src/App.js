@@ -1,14 +1,15 @@
+// src/App.js
 import React from 'react';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import LoginForm from './components/LoginForm';
-import Cart from './components/Cart';
+
+const theme = createTheme();
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to My React App</h1>
+    <ThemeProvider theme={theme}>
       <LoginForm />
-      <Cart />
-    </div>
+    </ThemeProvider>
   );
 }
 
